@@ -1,0 +1,28 @@
+<div class="box summary__alarms col-sm-2">
+    <div class="box__inr bdr1 w100 fl">
+        <h4>ALARMS</h4>
+        <span>Raised Today</span> 
+        <strong class="pull-right">
+            <div class="small" *ngIf="alarms.kpidata && alerts.latestalarmitem != null">
+                {{ alarms.kpidata["0"].kpi_value + alerts.count }}
+            </div>
+        </strong>
+        <div class="line"></div>
+
+        <div *ngIf="alerts.latestalarmitem != null" class="box__alarms col-sm-12 p0">
+            <h5>Last Alarm</h5>
+            <div class="bdr" *ngIf="alerts.latestalarmitem != null">
+                <input type="datetime" class="form-control" value="{{alerts.latestalarmitem.time}}">
+            </div>
+            <span *ngIf="alerts.latestalarmitem != null">
+                ({{alerts.latestalarmitem.desc}})
+                ({{alerts.latestalarmitem.color}})
+                
+                ({{alerts.latestalarmitem.size}})
+
+            </span>
+        </div>
+
+
+    </div>
+</div>

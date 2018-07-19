@@ -1,0 +1,29 @@
+<div class="box summary__cc col-sm-2">
+    <div class="box__inr bdr1 w100 fl">
+        <h4>CYCLE COUNT TASKS</h4>
+
+        <div class="box__cc  col-sm-12 p0">
+            <ul>
+                <li class="bg-transparent">
+                    <span>Planned</span>
+                    <label class="pull-right" *ngIf="planned">
+                        {{planned}}
+                    </label>
+                </li>
+                <li class="bg-yellow">
+                    <span>Pending Approval</span>
+                    <label class="pull-right" *ngIf="cyclecount.today">
+                        {{cyclecount.today.pending.count}}
+                    </label>
+                </li>
+                <li class="bg-green">
+                    <span>Completed Today</span>
+                    <label class="pull-right" *ngIf="cyclecount.today">
+                        {{cyclecount.today.accepted.count}}
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>

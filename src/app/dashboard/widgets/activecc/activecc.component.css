@@ -1,0 +1,218 @@
+.box__cont ul {
+    border-top: 1px solid #ddd;
+}
+
+.box__cont ul li+li {
+    border-left: 1px solid #ddd;
+}
+
+.box__cont h5 {
+    font-size: 13px;
+    text-align: center;
+}
+
+.pie-wrapper {
+            transform: scale(1.4);
+        left: 20px;
+        top: 30px;
+    
+    margin-top: 20px;
+}
+
+.csspie__inr {
+    background-color: #c7dff7;
+}
+
+.csspie__inr {
+    width: 80%;
+    height: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+.csspie:BEFORE, .csspie:AFTER {
+    background-color: #044f67;
+}
+
+p.pie-label {
+    margin-top: -62px;
+    z-index: 8;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+.pie-wrapper {
+    background-color: #d2d7d3;
+}
+
+
+
+
+
+
+.box.counting .box__inr {
+    background-color: #fbe18c;
+}
+
+
+.box.counting .box__cont {
+    background-color: #fdefbf;
+}
+
+.box.counting .has-pending{ display:none; }
+.box.pending .has-counting{ display:none; }
+
+.box.counting .csspie__inr {
+    background-color: #fbe18c;
+}
+
+
+i.icon.ani-blinking {
+    background-color: #f1d67f;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    top: 2px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+
+
+i.icon.ani-blinking {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {  
+    50% { opacity: 0; }
+  }
+
+  .box__cont {
+    height: 100%;
+}
+
+  .box__cont li {
+    border: 0;
+    margin-bottom:0;
+}
+
+
+.box__cont {
+    background-color: #d9eafb;
+}
+ .box__cont ul li{ text-align:center;}
+.box__cont ul {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0 !important;
+    width: 100%;
+    left: 0;
+}
+
+
+.box__chart  h4 {
+    margin-left: -4px;
+    margin-right: -4px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width : 1024px) {
+
+    .box__cont .lead_text h4 {
+        font-size: 14px;
+        margin-top: 40px;
+    }
+
+    .box__cont li span {
+        font-size: 10px;
+    }
+  
+    }
+  
+  
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+
+
+    .pie-wrapper  {
+        transform: scale(1.5) !important;
+        margin-left: 7px;
+    }
+    
+
+  	}
+  
+  
+  /*Landscape*/
+  @media only screen and (max-width : 960px) {	}
+  
+  
+  /* Kindel Fire HD 8.9in (800x1280) Tablets */
+  @media only screen and (max-width : 800px) {	}
+  
+  
+  /* iPad (All) (768x1024) Portrait Tablets */
+  @media only screen and (max-width : 768px) {	}
+  
+  /* Lower then iPad (All) (767x---) */
+  @media only screen and (max-width : 767px) {	}
+  
+  /*iPhone 6 Plus landscape � width: 736px */
+  @media only screen and (max-width : 736px) {	}
+  
+  /*iPhone 6 landscape � width: 667px */
+  @media only screen and (max-width : 667px) {	}
+  
+  
+  /*iPhone4 and iPhone5 Galaxy S2 and S3  */
+  @media only screen and (max-width : 640px) {	}
+  
+  
+  /* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
+  @media only screen and (max-width : 603px) {	}
+  
+  
+  /* iPhone 5 Landscape � 320x568px */
+  @media only screen and (max-width : 568px) {	}
+  
+  
+  /* Kindel Fire HD 8.9in (533x853) Tablets */
+  @media only screen and (max-width : 533px) {	}
+  
+  
+  /*iPhone3 Landscape*/
+  @media only screen and (max-width : 480px) {	}
+  
+  
+  /* iPhone 6 PLUS (414x736) */
+  @media only screen and (max-width : 414px) {	}
+  
+  
+  /* iPhone 6 portrait (375x667) */
+  @media only screen and (max-width : 375px ) {	}
+  
+  
+  /* Galaxy S5 (360x640) */
+  @media only screen and (max-width : 360px) {	}
+  
+  
+  /* iPhone 3/4 Blackberry8300 / LG/ AUSUS / S3 S4 */
+  @media only screen and (max-width : 320px) {	}
+  
+  
+  /*Galaxy Y*/
+  @media only screen and (max-width : 240px) {	}
+
+
+
+
+
+  

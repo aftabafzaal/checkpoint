@@ -1,0 +1,43 @@
+.box__replenishment{
+    text-align: center;
+
+border-radius: 8px 8px 0px 0px;
+}
+.box__replenishment{
+    text-align: center;
+line-height: 24px;
+border-radius: 3px;
+margin-bottom: 14px;
+}
+.box__replenishment.bg-yellow{
+ background: #ffff99;
+}
+.box__replenishment.bg-pink{
+ background: #e9aebc;
+}
+.box__replenishment.bg-transparent{
+ background: transparent;
+}
+.box__replenishment.bg-green{
+ background: #87d37c;
+}
+.box__replenishment h3{
+font-size: 18px;
+color:#686b6d;
+margin-top: 5px;
+font-weight: 400;
+}
+.box__replenishment strong{
+font-size: 36px;
+color:#2e3134;
+display: block;
+font-weight: 500;
+}
+.box__replenishment mark{	font-size: 10px;
+color:#878686;
+background: transparent;
+font-weight: 400;
+}
+.summary__replenishment .box__inr{
+padding: 14px;
+}

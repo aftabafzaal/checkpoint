@@ -1,0 +1,116 @@
+<app-header-dashboard></app-header-dashboard>
+<main id="page-content">
+
+  <section class="activities-area p20">
+    <div class="container">
+
+
+
+      <div class="activities__nav col-sm-1 hidden p0 pt10 listview">
+        <ul class="nav nav-tabs0">
+          <!--li class="active">
+            <a href="#activities1" data-toggle="tab">Day</a>
+          </li>
+          <li><a href="#activities2" data-toggle="tab">Week</a></li-->
+        </ul>
+        <!--div class="form-group">
+            <div class="input-group">
+              <input type="form-control" placeholder="Select Date" id="activitiesDate" />
+              <span class="input-group-addon p0 bdr0">
+                <i class="ion-md-calendar fa-2x"></i>
+              </span>
+            </div>
+          </div-->
+      </div>
+
+      <div class="activities__main col-sm-10 p0">
+        <div class="tab-content">
+          <div class="tab-pane active" id="activities1">
+            <section class="activity-area" *ngFor="let actData of activitiesData.days; let i = index">
+
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <h5 *ngIf="i == 0">Yesterday</h5>
+                        <h5 *ngIf="i == 1">{{ day1 | date:"MMM dd" }}</h5>
+                        <h5 *ngIf="i == 2">{{ day2 | date:"MMM dd" }}</h5>
+                        <h5 *ngIf="i == 3">{{ day3 | date:"MMM dd" }}</h5>
+                        <h5 *ngIf="i == 4">{{ day4 | date:"MMM dd" }}</h5>
+                        <h5 *ngIf="i == 5">{{ day5 | date:"MMM dd" }}</h5>
+                        <h5 *ngIf="i == 6">{{ day6 | date:"MMM dd" }}</h5>
+                      </th>
+                      <th *ngFor="let dayKpi of activitiesData.days[i].daykpi;">
+                        <mark>
+                          <label>{{dayKpi.value}}</label>
+                          <span>{{dayKpi.name}}</span>
+                        </mark>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-right ">
+                        Sold
+                        <br> Alarm
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <span class="bot">Visitors</span>
+                      </td>
+                      <td colspan="8">
+                        <div class="progress-group">
+                          <div class="progress vertical" *ngFor="let hourKpi of activitiesData.days[i].hourkpi;">
+                            <div class="deg-90">
+                              <time>{{hourKpi.slotstart}}</time>
+                              <h5>{{hourKpi.sold}}</h5>
+                              <strong *ngIf="hourKpi.alarms == 0">-</strong>
+                              <strong *ngIf="hourKpi.alarms > 0">{{hourKpi.alarms}}</strong>
+                            </div>
+                            <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="hourKpi.visitors" aria-valuemin="0" aria-valuemax="100"
+                              [style.width]='hourKpi.visitors + "%"'>
+                              <span *ngIf="hourKpi.visitors == 0"></span>
+                              <span *ngIf="hourKpi.visitors > 0">{{hourKpi.visitors}}</span>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="colapsegroup">
+                  <div id="colapse_{{i}}" class="collapse  clrlist listview dotlist--connect">
+                    <ul>
+                      <li *ngFor="let event of activitiesData.days[i].events;">
+                        <i class="icon ion-ios-radio-outline"></i>
+                        <time>{{event.time}}</time>
+                        <strong>{{event.displtxt1}}</strong>
+                        <label class="badge">{{event.displtxt2}}</label>
+                      </li>
+                    </ul>
+                  </div>
+                  <a id="#colapse_{{i}}" class="btn-collapse collapsed">
+                    <span class="collapsed--close">Show Events >></span>
+                    <span class="collapsed--open">Hide Events >></span>
+                  </a>
+                </div>
+
+              </div>
+
+            </section>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
+<app-footer-dashboard></app-footer-dashboard>

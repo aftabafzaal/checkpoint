@@ -1,0 +1,33 @@
+.caro-cap .caro__cap__lft h1 {
+    font-size:  60px;
+    margin-top:  5px;
+	margin-bottom: 0;
+}
+.caro-cap .caro__cap__lft p {
+    font-size: 24px;
+	letter-spacing: 1px;
+}
+.caro__cap__lft a {
+    color:  #fff;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+.carousel-control {
+    top: 35px;
+}
+.carousel-control {
+    display:none;
+}
+.carousel-inner .item {
+    height: 163px;
+	background-size: cover;
+}
+.caro-cap {
+    padding: 10px 0;
+    color: #fff;
+}
+.caro__cap__lft a::after {
+    content: '\f105';
+    font-family:  fontawesome;
+    padding-left:  10px;
+}

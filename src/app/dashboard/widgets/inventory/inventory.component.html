@@ -1,0 +1,33 @@
+<div class="box summary__inventory col-sm-3">
+    <div class="box__inr bdr1 w100 fl">
+        <h4>ON-HAND INVENTORY</h4>
+        <div class="box__chat  col-sm-7 p0">
+            <div class="pie-wrapper">
+                <div class="csspie__inr"></div>
+                <div class="csspie chartVal__{{chartData | number:'1.0-0' }}" ></div>
+                <p class="pie-label" *ngIf="inventory[0] || inventory[1]">
+                    {{inventory[0].count + inventory[1].count }}
+                    <span class="">TOTAL</span></p>
+            </div>
+
+            <!--div id="chart-container" *ngIf="inventory">
+                 <canvas baseChart [chartType]="chartType" [data]="chartData" [labels]="chartLabels" [options]="chartOptions">
+                </canvas>
+    
+            </div-->
+
+        </div>
+        <div class="box__cont col-sm-5 p0 listview">
+            <ul style="padding-left:0px;">
+                <li *ngIf="inventory[0]" class="darklist">
+                    <span *ngIf="inventory[0].type == 'SF'"> Salesfloor</span>
+                    <strong> {{inventory[0].count}}</strong>
+                </li>
+                <li *ngIf="inventory[1]" class="lightlist">
+                    <span *ngIf="inventory[1].type == 'BR'"> Stockroom</span>
+                    <strong> {{inventory[1].count}}</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

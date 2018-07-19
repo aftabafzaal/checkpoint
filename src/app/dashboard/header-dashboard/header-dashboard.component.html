@@ -1,0 +1,90 @@
+<header>
+    <section class="hdr-area hdr-top bg-pink nav-trans--hover">
+        <div class="container w100 p0">
+
+            <div class="hdr-top__menu col-sm-4">
+                <ul class="nav navbar-nav fl">
+                    <li><a class="white-link"><i class="ion-md-apps"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="hdr-top__logo col-sm-4 text-center">
+                <a class="navbar-brand fn dib" routerLink=""><img src="../../assets/images/logo.png" alt="" /></a>
+            </div>
+
+            <div class="hdr-top__menu--admin col-sm-4">
+
+                <ul class="nav navbar-nav fr mt5">
+                    <li class="dropdown user user-menu pul-rgt dropdown-align-right">
+                        <a routerLink="" class="dropdown-toggle white-link" data-toggle="dropdown" aria-expanded="false">
+                            <span class="usr-name">Hello , JC</span>
+                            <span class="dp fr"><img src="../../assets/images/usr.jpg" alt="user" ></span>
+                        </a>
+                        <ul class="dropdown-menu p20 hidden">
+                            <li class="user-header">
+                                <span class="dp fr"><img src="../../assets/images/usr.jpg" alt="user"></span>
+                                <p>Robert <small>- Instructor</small></p>
+                                <small>Member since 31 March. 2013</small>
+                            </li>
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="my-account.php" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Profile</a>
+                                </div>
+                                <div class="pull-right ">
+                                    <a href="login.php" class="btn btn-default btn-flat bg-blue white"><i class="fa fa-sign-out"></i> Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="hdr-nav">
+        <div class="container">
+
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!--                                             Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-main">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand bg-snow" href="#">Store Console</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbar-main">
+
+                        <ul class="nav navbar-nav">
+
+                            
+                            <li [routerLinkActive]="['active']"><a routerLink="/dashboard/overview">Overview</a></li>
+                            <!--li><a routerLink="#">Inventory</a></li-->
+                            <li [routerLinkActive]="['active']"><a routerLink="/dashboard/activities">Activities</a></li>
+                            <!--            
+                                                                                <li class="dropdown">
+                                                                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                                                                  <ul class="dropdown-menu">
+                                                                                    <li><a href="#">Action</a></li>
+                                                                                    <li><a href="#">Another action</a></li>
+                                                                                    <li><a href="#">Something else here</a></li>
+                                                                                    <li class="divider"></li>
+                                                                                    <li><a href="#">Separated link</a></li>
+                                                                                    <li class="divider"></li>
+                                                                                    <li><a href="#">One more separated link</a></li>
+                                                                                  </ul>
+                                                                                </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </section>
+</header>

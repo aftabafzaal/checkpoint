@@ -1,0 +1,48 @@
+<div class="box col-sm-3 activities">
+    <div class="box__inr">
+        <div class="activities__hint posabs r0" *ngIf="activities"> > {{activities.qualitythresh}}%
+        </div>
+        <div class="box__img col-sm-12 ngx-pagination-dots">
+            <h4>ACTIVITIES</h4>
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let activity of activities['cc-events'] | paginate: { id: 'activitiesPaging', itemsPerPage: 4, currentPage: p }">
+                        <td width="20">
+                            <span *ngIf="activity && activity.age == 0">
+                                <span class="progress_status all">
+                                    <i class="fa fa-circle"></i>
+                                </span>
+                            </span>
+                            <span *ngIf="activity && activity.age > 0 && activity.age <= 3">
+                                <span class="progress_status">{{ activity.age }}</span>
+                            </span>
+                            <span *ngIf="activity && activity.age > 3">
+                                <span class="progress_status bg-yellow">{{ activity.age }}</span>
+                            </span>
+                            <span *ngIf="activity && activity.age == null || activity.age < 0">
+                                <span class="progress_status all">X</span>
+                            </span>
+                        </td>
+
+                        <td>
+                            <span class="progress_name" *ngIf="activity">{{ activity["scope-desc"] }}</span>
+                            <div *ngIf="activity && activity['det-pct'] != null && activity['det-pct'] != 0 ">
+                                <span class="progress_val" *ngIf="activity">{{ activity["det-pct"] }}%</span>
+                                <div class="progress" *ngIf="activity">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"
+                                        [style.width]='activity["det-pct"] + "%"'></div>
+                                </div>
+                            </div>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event" id="activitiesPaging"></pagination-controls>
+
+        </div>
+
+    </div>
+
+
+</div>

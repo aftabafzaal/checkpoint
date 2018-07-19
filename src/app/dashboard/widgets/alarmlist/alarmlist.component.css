@@ -1,0 +1,166 @@
+.swiper-container.dontfly.s1 {
+    padding-bottom: 30px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #4679a7;
+}
+
+
+
+.swiper-button {
+    height: 20px;
+    position: absolute;
+    bottom: 70px;
+    right: -20px;
+    z-index: 777;
+    left: -20px;
+}
+
+.swiper-button > div {
+    background-image: none;
+    margin-top: -10px;
+    
+    height: 20px;
+    text-align: center;
+}
+
+.alaram-box__img {
+     height: 102px;
+}
+
+.alaram-box__cont span {
+    font-size: 12px;
+        line-height: 14px;
+}
+
+.alarm-mgs h5 {
+    line-height: 100px;
+    font-size: 20px;
+    color: #777;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.error-msg {
+    height: 150px;
+    font-size: 20px;
+    color: #777;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 1024px) {
+
+        .alaram-box__img {
+            height: 108px;
+        }
+	  
+	}
+	  
+	  
+	/* Medium Devices, Desktops */
+	@media only screen and (max-width : 992px) {
+		.alaram-box__cont {
+			width: 100%;
+			height: 130px;
+		}
+		
+		.alaram-box__img {
+			width: 100%;
+		}
+
+		.alarams-area .nav-tabs {
+			padding: 0;
+		}
+
+	}
+	  
+	  
+	  /*Landscape*/
+	  @media only screen and (max-width : 960px) {	}
+	  
+	  
+	  /* Kindel Fire HD 8.9in (800x1280) Tablets */
+	  @media only screen and (max-width : 800px) {
+
+		.alaram-box__cont {
+			width: 100%;
+			height: 130px;
+		}
+		
+		.alaram-box__img {
+			width: 100%;
+		}
+	  	}
+	  
+	  
+	  /* iPad (All) (768x1024) Portrait Tablets */
+	  @media only screen and (max-width : 768px) {	}
+	  
+	  /* Lower then iPad (All) (767x---) */
+	  @media only screen and (max-width : 767px) {	}
+	  
+	  /*iPhone 6 Plus landscape � width: 736px */
+	  @media only screen and (max-width : 736px) {	}
+	  
+	  /*iPhone 6 landscape � width: 667px */
+	  @media only screen and (max-width : 667px) {	}
+	  
+	  
+	  /*iPhone4 and iPhone5 Galaxy S2 and S3  */
+	  @media only screen and (max-width : 640px) {	}
+	  
+	  
+	  /* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
+	  @media only screen and (max-width : 603px) {	}
+	  
+	  
+	  /* iPhone 5 Landscape � 320x568px */
+	  @media only screen and (max-width : 568px) {	}
+	  
+	  
+	  /* Kindel Fire HD 8.9in (533x853) Tablets */
+	  @media only screen and (max-width : 533px) {	}
+	  
+	  
+	  /*iPhone3 Landscape*/
+	  @media only screen and (max-width : 480px) {	}
+	  
+	  
+	  /* iPhone 6 PLUS (414x736) */
+	  @media only screen and (max-width : 414px) {	}
+	  
+	  
+	  /* iPhone 6 portrait (375x667) */
+	  @media only screen and (max-width : 375px ) {	}
+	  
+	  
+	  /* Galaxy S5 (360x640) */
+	  @media only screen and (max-width : 360px) {	}
+	  
+	  
+	  /* iPhone 3/4 Blackberry8300 / LG/ AUSUS / S3 S4 */
+	  @media only screen and (max-width : 320px) {	}
+	  
+	  
+	  /*Galaxy Y*/
+	  @media only screen and (max-width : 240px) {	}
+	
+	
+	

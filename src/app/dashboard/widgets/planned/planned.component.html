@@ -1,0 +1,190 @@
+<div class="box col-sm-3 tasks">
+    <div class="box__inr">
+
+        <div class="box__hed">
+            <h4>TASKS </h4>
+            <div class="actions clrlist">
+
+                <ul>
+                    <li>
+                        <span class="badge bg-yellow" *ngIf="planned.missed">Missed :{{planned.missed.count}}</span>
+                    </li>
+
+                    <li>
+                        <a data-toggle="modal" data-target="#myModal" href="#">
+                            <i class="ion-md-open"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="box__img col-sm-12 pt10">
+
+            <div class="row">
+                <div class="conter-tile-area conter-tile-area--mini col-sm-4 ">
+                    <span class="icon bg-yellow">
+                        <img src="../../assets/images/icon-today.png" alt="" />
+                        <small>Today</small>
+                    </span>
+                    <h3 *ngIf="planned.plannedToday">{{planned.plannedToday.count}}</h3>
+                </div>
+
+                <div class="conter-tile-area conter-tile-area--mini col-sm-4 ">
+                    <span class="icon">
+                        <div>
+                            <img src="../../assets/images/icon-tomorrow.png" alt="" />
+                        </div>
+                        <small>Tomorrow</small>
+                    </span>
+                    <h3 *ngIf="planned.plannedNextDay">{{planned.plannedNextDay.count}}</h3>
+                </div>
+
+                <div class="conter-tile-area conter-tile-area--mini col-sm-4 ">
+                    <span class="icon">
+                        <img src="../../assets/images/icon-week.png" alt="" />
+                        <small>This Week</small>
+                    </span>
+                    <h3 *ngIf="planned.plannedAhead">{{planned.plannedAhead.count}}</h3>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">CYCLE COUNT TASKS</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="conter-tile-area conter-tile-area--mini col-sm-4 ">
+                    <span class="icon bg-yellow">
+                        <img src="../../assets/images/icon-today.png" alt="" />
+                        <small>Today</small>
+                    </span>
+                    <h3 *ngIf="planned.plannedToday.count > 0">{{planned.plannedToday.count}}</h3>
+                </div>
+
+                <div class="conter-tile-area conter-tile-area--mini col-sm-4 ">
+                    <span class="icon">
+                        <div>
+                            <img src="../../assets/images/icon-tomorrow.png" alt="" />
+                        </div>
+                        <small>Tomorrow</small>
+                    </span>
+                    <h3 *ngIf="planned.plannedNextDay.count > 0">{{planned.plannedNextDay.count}}</h3>
+                </div>
+
+                <div class="conter-tile-area conter-tile-area--mini col-sm-4 ">
+                    <span class="icon">
+                        <img src="../../assets/images/icon-week.png" alt="" />
+                        <small>This Week</small>
+                    </span>
+                    <h3 *ngIf="planned.plannedAhead.count > 0">{{planned.plannedAhead.count}}</h3>
+                </div>
+
+
+                <div class="clearfix"></div>
+
+                <div class="col-sm-12">
+
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#TabModal1" data-toggle="tab">Today</a>
+                        </li>
+                        <li>
+                            <a href="#TabModal2" data-toggle="tab">Tomorrow</a>
+                        </li>
+                        <li>
+                            <a href="#TabModal3" data-toggle="tab">This Week</a>
+                        </li>
+                    </ul>
+
+
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="TabModal1">
+
+
+                            <table class="table">
+                                <tbody>
+                                    <tr *ngFor="let today of planned.plannedToday['cc-tasks']">
+                                        <td>
+                                            <span class="badge badge-trans">{{ todayDate | date: "dd/MM" }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge" *ngIf="today.loctype == 'SF'">Salesfloor</span>
+                                            <span class="badge" *ngIf="today.loctype == 'BR'">Stockroom</span>
+                                            <span class="badge" *ngIf="today.scope == 'PARTIAL'">FILTERED</span>
+                                            <span class="badge" *ngIf="today.scope == 'PARTIAL'">{{today["scope-desc"]}}</span>
+                                            <span class="badge" *ngIf="today.scope == 'FULL'">{{today["scope-desc"]}}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        <div class="tab-pane" id="TabModal2">
+
+                            <table class="table">
+                                <tbody>
+                                    <tr *ngFor="let tomorrow of planned.plannedNextDay['cc-tasks']">
+                                        <td>
+                                            <span class="badge badge-trans">{{ tomorrowDate | date: "dd/MM" }}</span>
+                                        </td>
+                                        <td>
+                                            <span class="badge" *ngIf="tomorrow.loctype == 'SF'">Salesfloor</span>
+                                            <span class="badge" *ngIf="tomorrow.loctype == 'BR'">Stockroom</span>
+                                            <span class="badge" *ngIf="tomorrow.scope == 'PARTIAL'">FILTERED</span>
+                                            <span class="badge" *ngIf="tomorrow.scope == 'PARTIAL'">{{tomorrow["scope-desc"]}}</span>
+                                            <span class="badge" *ngIf="tomorrow.scope == 'FULL'">{{tomorrow["scope-desc"]}}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                        <div class="tab-pane" id="TabModal3">
+
+                            <table class="table">
+                                <tbody>
+                                    <tr *ngFor="let nextweek of planned.plannedAhead['cc-tasks']">
+                                        <td>
+                                            <span class="badge" *ngIf="nextweek.loctype == 'SF'">Salesfloor</span>
+                                            <span class="badge" *ngIf="nextweek.loctype == 'BR'">Stockroom</span>
+                                            <span class="badge" *ngIf="nextweek.scope == 'PARTIAL'">FILTERED</span>
+                                            <span class="badge" *ngIf="nextweek.scope == 'PARTIAL'">{{nextweek["scope-desc"]}}</span>
+                                            <span class="badge" *ngIf="nextweek.scope == 'FULL'">{{nextweek["scope-desc"]}}</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="clearfix"></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="box summary__store col-sm-3">
+    <div class="box__inr bdr1 w100 fl">
+        <h4>SHOPPERS IN STORE</h4>
+        <div class="box__chat--outer">
+            <div *ngIf="calculatedOccupanyRate && warningThreshold && calculatedOccupanyRate != null && warningThreshold != null && calculatedOccupanyRate > warningThreshold; then high"></div>
+            <div *ngIf="calculatedOccupanyRate && calculatedOccupanyRate != null && calculatedOccupanyRate < 5; then low"></div>
+            <div *ngIf="calculatedOccupanyRate && calculatedOccupanyRate != null && calculatedOccupanyRate < warningThreshold && calculatedOccupanyRate > 5; then normal"></div>
+
+            <ng-template #high>
+                <div class="box__chat high col-sm-12 p0">
+                    <!--div id="container" style="height: 149px; max-height:90px; overflow: hidden;"></div-->
+                    <div class="meter__pin">
+                        <img src="../../assets/images/ckp.png">
+                    </div>
+
+                </div>
+            </ng-template>
+
+
+            <ng-template #low>
+                <div class="box__chat low col-sm-12 p0">
+                    <!--div id="container" style="height: 149px; max-height:90px; overflow: hidden;"></div-->
+                    <div class="meter__pin">
+                        <img src="../../assets/images/ckp.png">
+                    </div>
+
+                </div>
+            </ng-template>
+
+            <ng-template #normal>
+                <div class="box__chat normal col-sm-12 p0">
+                    <!--div id="container" style="height: 149px; max-height:90px; overflow: hidden;"></div-->
+                    <div class="meter__pin">
+                        <img src="../../assets/images/ckp.png">
+                    </div>
+
+                </div>
+            </ng-template>
+            <div class="aa">current Occupancy</div>
+        </div>
+        <div class="box__cont col-sm-12 p0">
+            <ul>
+                <li>
+                    <span>Currently In Store
+                        <br>
+                    </span>
+                    <strong *ngIf="visitor.kpidata && visitor.kpidata != null ">{{visitor.kpidata[8].kpi_value}}</strong>
+                    <strong *ngIf="visitor.kpidata == null ">0</strong>
+                </li>
+                <li>
+                    <span>Total Shoppers Today
+                        <br>
+                    </span>
+                    <strong *ngIf="visitor.kpidata && visitor.kpidata != null ">{{visitor.kpidata[1].kpi_value}}</strong>
+                    <strong *ngIf="visitor.kpidata == null ">0</strong>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

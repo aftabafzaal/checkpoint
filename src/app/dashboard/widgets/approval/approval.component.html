@@ -1,0 +1,112 @@
+<div class="box col-sm-3 approval">
+    <div *ngIf="approval.today && approval.today != null && approval.today.pending.count > 0; then content else noContent"></div>
+
+    <ng-template #content>
+        <div class="box__inr">
+            <div class="box__hed">
+                <h4>PENDING APPROVAL</h4>
+                <div class="actions clrlist">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="ion-md-notifications"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="modal" data-target="#ApprovalModal">
+                                <i class="ion-md-open"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box__img col-sm-6 p20">
+
+                <div class="conter-tile-area pul-cntr">
+                    <span class="icon">
+                        <img src="../../assets/images/icon2.png" alt="" />
+                    </span>
+                    <h3 *ngIf="approval.today != null">{{approval.today.pending.count}}</h3>
+                </div>
+            </div>
+
+            <div class="box__cont1 col-sm-6 p20 ngx-pagination-dots">
+                <ul *ngIf="approval.today != null">
+                    <div class="swiper-container1 dontfly s21">
+                        <div class="swiper-wrapper1" *ngIf="showControls">
+
+                            <div class="swiper-slide1 clrlist listview" *ngFor="let appr of approval.today.pending.events  | paginate: { id: 'firstApproval', itemsPerPage: 2, currentPage: p1 }">
+                                <li>
+                                    <span *ngIf="appr.loctype == 'SF'"> SalesFloor
+                                        <br/> {{appr["scope-desc"]}}</span>
+                                    <span *ngIf="appr.loctype == 'BR'"> StockRoom
+                                        <br/> {{appr["scope-desc"]}}</span>
+
+                                    <strong>{{appr["det-pct"]}}%</strong>
+                                </li>
+                            </div>
+
+                            <pagination-controls (pageChange)="p1 = $event" id="firstApproval"></pagination-controls>
+                        </div>
+
+                    </div>
+                </ul>
+            </div>
+
+        </div>
+    </ng-template>
+
+    <ng-template #noContent>
+        <div class="box__inr text-center ">
+            <div class="box__hed">
+                <h4>PENDING APPROVAL</h4>
+            </div>
+            <div class="flex-cntr hedless-height">
+                Nothing to Approve
+            </div>
+        </div>
+    </ng-template>
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ApprovalModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog w50">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">CYCLE COUTS REQUIRING APPROVALS</h4>
+            </div>
+
+            <div class="modal-body">
+
+                <table class="table">
+                    <tbody>
+                        <tr *ngFor="let apprr of approval.today.pending.events">
+                            <td>
+                                <span class="badge" *ngIf="apprr.loctype == 'SF'">Salesfloor</span>
+                                <span class="badge" *ngIf="apprr.loctype == 'BR'">StockRoom</span>
+                                <span class="badge" *ngIf="apprr.scope == 'FILTERED'">FILTERED</span>
+                                <span class="badge">{{apprr["scope-desc"]}}</span>
+                            </td>
+                            <td>
+                                <span class="badge --rounded">{{apprr["det-pct"]}}%</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-trans p0" style="cursor:pointer;" (click)="approve(apprr['ccId'])">
+                                    <i class="ion-md-checkmark"></i>
+                                    Approve</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+    </div>

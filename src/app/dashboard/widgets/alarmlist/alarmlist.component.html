@@ -1,0 +1,82 @@
+<div class="clearfix">
+</div>
+
+<div class="alarams-area">
+
+    <div class="hed hed--ribbon">
+        <h3>ALARMS</h3>
+    </div>
+
+
+    <div *ngIf="alarmlist.timeframe && alarmlist.timeframe != null then content2 else noContent2"></div>
+
+    <ng-template #content2>
+
+        
+    <div class="tab-area bg-skyblue fl w100">
+            <ul class="nav nav-tabs">
+                <li *ngFor="let time of alarmlist.timeframe; let i = index; let last = last" [attr.data-index]="i" [class.active]="last">
+                    <a href="#alaram{{i}}" data-toggle="tab">{{time.startts}}</a>
+                </li>
+                <!--li><a href="#closedhours" data-toggle="tab">closed hours</a></li-->
+            </ul>
+    
+    
+            <!-- <ul>
+                <li *ngFor="let item of collection | paginate: { itemsPerPage: 5, currentPage: p1, id: 'first' } ; let i = index;"> {{item}} {{i}}        
+                    
+                        <ul>
+                            <li data-id={{i}} *ngFor="let item2 of collection2 | paginate: { itemsPerPage: 10, currentPage: p1, id: i } ; let j = index;"> {{item2}} {{i}}           </li>
+                        </ul>
+                        <pagination-controls (pageChange)="p1 = $event" id="{{i}}"></pagination-controls>
+                </li>
+              </ul>
+              <pagination-controls (pageChange)="p1 = $event" id="first"></pagination-controls> -->
+    
+    
+            <div class="tab-content ngx-pagination-dots">
+    
+                <div *ngFor="let timedetail of alarmlist.timeframe; let i = index; let last = last" id="alaram{{i}}" class="tab-pane" [class.active]="last">
+    
+                    <div *ngIf="alarmlist.timeframe[i].alarmeditems.length == 0">
+                        <div class="text-center alarm-mgs">
+                            <h5>No Alarms</h5>
+                        </div>
+                    </div>
+    
+    
+                    <div *ngFor="let item of alarmlist.timeframe[i].alarmeditems | paginate: { itemsPerPage: 6, currentPage: p[i], id: alarmlist.timeframe[i] }" class="alaram-box col-sm-2">
+                        <div class="alaram-box__inr">
+                            <div class="alaram-box__cont col-sm-8">
+                                <time>{{item.time}}</time>
+                                <span class="alaram__type">{{item.desc}}</span>
+                                <span class="alaram__size">{{item.color}} \ {{item.size}}</span>
+                                <span class="alaram__number">{{item.sku}}</span>
+                            </div>
+                            <div class="alaram-box__img col-sm-4">
+                                <img src="{{item.imgurl}}" alt="" />
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <pagination-controls (pageChange)="p[i] = $event" [id]="alarmlist.timeframe[i]"></pagination-controls>
+                </div>
+                
+                
+
+
+            </div>
+        </div>
+
+        
+        </ng-template>
+
+        <ng-template #noContent2>
+            <div class="tab-area bg-skyblue fl w100 error-msg flex-cntr">
+                No Alarms
+            </div>
+        </ng-template>
+
+
+        
+</div>

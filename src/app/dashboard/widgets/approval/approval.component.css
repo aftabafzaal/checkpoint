@@ -1,0 +1,195 @@
+.cc-area .box__cont li{
+    height: 82px;
+}
+
+.cc-area .box.approval .box__cont li span {
+    font-size: 14px;
+}
+
+i.ion-md-checkmark {
+    background-color: #59abe3;
+    color: #fff;
+    width: 28px;
+    display: inline-block;
+    line-height: 28px;
+    border-radius: 50%;
+    margin-right: 2px;
+    box-shadow: 0px 2px 4px 0px #ccc;
+}
+
+.modal .badge-trans.p0 {
+    padding: 0;
+    color: #59abe3;
+}
+
+.badge.--rounded {
+    background-color: #c7dff7;
+    border-radius: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 70px;
+    text-align: center;
+}
+
+
+.swiper-pagination {
+    z-index: 555;
+    width: 50% ;
+    float: right;
+    right: 0px;
+    right: 0%;
+    left: auto;
+}
+
+
+.swiper-slide { width:100%; }
+
+
+.swiper-button {
+    height: 20px;
+    position: absolute;
+    bottom: 50%;
+    width: auto;
+    right: -15px;
+    z-index: 777;
+    /* display: none; */
+    left: -15px;
+}
+
+.swiper-button > div {
+    background-image: none;
+    margin-top: -10px;
+    
+    height: 20px;
+    text-align: center;
+}
+
+
+ul.ngx-pagination {
+}
+
+.box__cont1 {
+    height: 208px;
+    padding-left: 0;
+}
+
+.box__cont1 ul {
+    padding-left: 14px;
+}
+
+.box__cont1 ul li {
+    border-left: 1px solid #8db6d3;
+    padding-left: 15px;
+
+}
+
+
+
+.swiper-slide1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 65px;
+}
+
+.swiper-slide1 li{ height: 100%; }
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width : 1024px) {
+    
+    
+
+
+
+
+    .box__img {
+        width: 45%;
+        padding: 10px;
+    }
+
+    .swiper-slide1 li {
+        font-size: 11px;
+    }
+    
+    .swiper-slide1 {
+        margin-top: 5px;
+    }
+    
+
+        }
+          
+          
+          /* Medium Devices, Desktops */
+          @media only screen and (max-width : 992px) {	}
+          
+          
+          /*Landscape*/
+          @media only screen and (max-width : 960px) {	}
+          
+          
+          /* Kindel Fire HD 8.9in (800x1280) Tablets */
+          @media only screen and (max-width : 800px) {	}
+          
+          
+          /* iPad (All) (768x1024) Portrait Tablets */
+          @media only screen and (max-width : 768px) {	}
+          
+          /* Lower then iPad (All) (767x---) */
+          @media only screen and (max-width : 767px) {	}
+          
+          /*iPhone 6 Plus landscape � width: 736px */
+          @media only screen and (max-width : 736px) {	}
+          
+          /*iPhone 6 landscape � width: 667px */
+          @media only screen and (max-width : 667px) {	}
+          
+          
+          /*iPhone4 and iPhone5 Galaxy S2 and S3  */
+          @media only screen and (max-width : 640px) {	}
+          
+          
+          /* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
+          @media only screen and (max-width : 603px) {	}
+          
+          
+          /* iPhone 5 Landscape � 320x568px */
+          @media only screen and (max-width : 568px) {	}
+          
+          
+          /* Kindel Fire HD 8.9in (533x853) Tablets */
+          @media only screen and (max-width : 533px) {	}
+          
+          
+          /*iPhone3 Landscape*/
+          @media only screen and (max-width : 480px) {	}
+          
+          
+          /* iPhone 6 PLUS (414x736) */
+          @media only screen and (max-width : 414px) {	}
+          
+          
+          /* iPhone 6 portrait (375x667) */
+          @media only screen and (max-width : 375px ) {	}
+          
+          
+          /* Galaxy S5 (360x640) */
+          @media only screen and (max-width : 360px) {	}
+          
+          
+          /* iPhone 3/4 Blackberry8300 / LG/ AUSUS / S3 S4 */
+          @media only screen and (max-width : 320px) {	}
+          
+          
+          /*Galaxy Y*/
+          @media only screen and (max-width : 240px) {	}
+        
+        
+        

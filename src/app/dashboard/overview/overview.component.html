@@ -1,0 +1,54 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-header-dashboard></app-header-dashboard>
+<main id="page-content">
+    <section class="summery-area p10 ">
+        <div class="container">
+            <div class="summary-group col-sm-10 pul-cntr mb5">
+                <app-inventory></app-inventory>
+                <app-replenishment></app-replenishment>
+                <app-cyclecount></app-cyclecount>
+                <app-alarms></app-alarms>
+                <app-visitor></app-visitor>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-area p10 bg-snow">
+        <div class="container">
+
+            <div class="cc-area">
+                <div class="row">
+                    <div class="hed hed--ribbon"><h3>CYCLE COUNT</h3></div>
+                    <div class="mx-4">
+                        <app-approval></app-approval>
+                        <app-planned></app-planned>
+                        <app-activecc></app-activecc>
+                        <app-activities></app-activities>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cc-area">
+
+                <div class="row">
+
+                    <div class="hed hed--ribbon --dark"><h3>REPLENISHMENT</h3></div>
+
+                    <div class="mx-4">
+                        <app-outofstock></app-outofstock>
+                        <app-outofshelf></app-outofshelf>
+                    </div>
+
+                    <app-alarmlist></app-alarmlist>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <div class="clearfix"></div>
+</main>
+<app-footer-dashboard></app-footer-dashboard>

@@ -1,0 +1,239 @@
+.summery-area .box__inr {
+    border: 1px solid #d2d6d4;
+    background-color: #e3e5e4;
+    height: 251px;
+    padding: 10px;
+}
+
+.pie-wrapper {
+    margin-left: 12px;
+}
+
+.highcharts-button{
+	display:  none !important;
+}
+
+.summary__inventory .box__cont{
+    padding-top: 0px;
+}
+
+.summary__inventory .box__inr {
+    border-radius: 13px 0px 0px 13px;
+}
+
+.summary__inventory .box__cont ul{
+	padding-left: 0px;
+	text-align: left;
+}
+
+.summary__inventory .box__cont ul li{
+    position: relative;
+    list-style: disc;
+    padding-left: 20px;
+    border-left: 1px solid #adb9ca;
+    margin-top: 0px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 30px;
+    height: 80px;
+}
+
+.summary__inventory .box__cont ul li:before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 4px;
+    color: #547594;
+    font-size: 7px;
+    width: 6px;
+    height: 6px;
+    display: block;
+    background: #547594;
+    border-radius: 8px;
+    top: 17px;
+}
+
+.summary__inventory .box__cont ul li span{
+	color:#486988;
+	font-size: 14px;
+	text-transform: uppercase;
+    font-weight: 600;
+    line-height: 14px;
+    display: inline-block;
+}
+
+.summary__inventory .box__cont ul li strong {
+    color: #2e3134;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.summery-area .box {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+canvas.chartjs-render-monitor {
+    width: 400px !important;
+    height: 210px !important;
+    margin-left: -115px;
+    margin-top: -15px;
+}
+
+
+
+
+
+
+
+
+
+.pie-wrapper {
+    transform: scale(1.65);
+    -webkit-transform: scale(1.65);
+    left: 20px;
+    top: 34px;
+    margin-top: 10px;
+}
+
+.csspie__inr {
+    background-color: #e3e5e4;
+}
+
+.csspie__inr {
+width: 80%;
+height: 80%;
+margin-top: 10%;
+margin-left: 10%;
+}
+
+.csspie:BEFORE, .csspie:AFTER {
+    background-color: #4679a8;
+}
+
+p.pie-label {
+    margin-top: -62px;
+    z-index: 8;
+    position: absolute;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: #2e3134;
+}
+.pie-wrapper {
+background-color: #d2d7d3;
+}
+
+p.pie-label span {
+    font-size: 8px;
+    line-height: 10px;
+    display: block;
+    color: #999;
+    font-weight: 500;
+}
+
+.pie-wrapper {
+    background-color: #26c281 !important;
+}
+
+
+.darklist span { color: #4679a8 !important; }
+.lightlist span { color: #26c281 !important; }
+
+
+.box__cont ul li.lightlist:before{
+    background: #26c281 !important;
+}
+
+
+
+
+
+
+
+@media only screen and (max-width : 1024px) {
+    
+.summary__inventory .box__cont ul li span {
+    font-size: 11px;
+    width: 72px;
+    white-space: normal;
+    margin-top: 8px;
+    display: block;
+}
+  
+    }
+  
+  
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {
+
+     .pie-wrapper {
+        transform: scale(1.5) !important;
+        margin-left: 20px !important;
+    }
+
+  	}
+  
+  
+  /*Landscape*/
+  @media only screen and (max-width : 960px) {	}
+  
+  
+  /* Kindel Fire HD 8.9in (800x1280) Tablets */
+  @media only screen and (max-width : 800px) {	}
+  
+  
+  /* iPad (All) (768x1024) Portrait Tablets */
+  @media only screen and (max-width : 768px) {	}
+  
+  /* Lower then iPad (All) (767x---) */
+  @media only screen and (max-width : 767px) {	}
+  
+  /*iPhone 6 Plus landscape � width: 736px */
+  @media only screen and (max-width : 736px) {	}
+  
+  /*iPhone 6 landscape � width: 667px */
+  @media only screen and (max-width : 667px) {	}
+  
+  
+  /*iPhone4 and iPhone5 Galaxy S2 and S3  */
+  @media only screen and (max-width : 640px) {	}
+  
+  
+  /* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
+  @media only screen and (max-width : 603px) {	}
+  
+  
+  /* iPhone 5 Landscape � 320x568px */
+  @media only screen and (max-width : 568px) {	}
+  
+  
+  /* Kindel Fire HD 8.9in (533x853) Tablets */
+  @media only screen and (max-width : 533px) {	}
+  
+  
+  /*iPhone3 Landscape*/
+  @media only screen and (max-width : 480px) {	}
+  
+  
+  /* iPhone 6 PLUS (414x736) */
+  @media only screen and (max-width : 414px) {	}
+  
+  
+  /* iPhone 6 portrait (375x667) */
+  @media only screen and (max-width : 375px ) {	}
+  
+  
+  /* Galaxy S5 (360x640) */
+  @media only screen and (max-width : 360px) {	}
+  
+  
+  /* iPhone 3/4 Blackberry8300 / LG/ AUSUS / S3 S4 */
+  @media only screen and (max-width : 320px) {	}
+  
+  
+  /*Galaxy Y*/
+  @media only screen and (max-width : 240px) {	}
+
+
+

@@ -1,0 +1,69 @@
+.colset__box .colset__box__inr {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 5px 20px 5px;
+}
+.colset__box__inr:hover h3 {
+    background-color: #d3d2d2;
+	
+}
+.colset__box.metroflip-box .back {
+    position: absolute;
+    padding: 5px 25px 25px 25px;
+}
+.colset__box.metroflip-box .front h3 {
+    font-size:  27px;
+    font-weight: 400;
+	margin-top: 5px;
+}
+.colset__box.metroflip-box .front p {
+    font-size: 16px;
+    font-weight: 400;
+}
+.colset__box.metroflip-box .back h3 {
+    color:  #000;
+    line-height: 1.6;
+    margin-top:  10px;
+    font-size:  20px;
+    font-weight:  100;
+	padding: 10px 0;
+}
+.colset__box.metroflip-box .colset__box__inr {
+    height: 275px;
+}
+.colset__box1 .colset__box__inr {
+	border: 1px solid #9f8ac0;
+}
+.colset__box1 .colset__box__inr:hover {
+    background-color: #9f8ac0;
+}
+.colset__box2 .colset__box__inr {
+	border: 1px solid #59abe3;
+}
+.colset__box2 .colset__box__inr:hover {
+    background-color: #59abe3;
+}
+.colset__box3 .colset__box__inr {
+	border: 1px solid #80cbc4;
+}
+.colset__box3 .colset__box__inr:hover {
+    background-color: #80cbc4;
+}
+.colset__box4 .colset__box__inr {
+	border: 1px solid #87d37c;
+}
+.colset__box4 .colset__box__inr:hover {
+    background-color: #87d37c;
+}
+.colset__box5 .colset__box__inr {
+	border: 1px solid #aebdc3;
+}
+.colset__box5 .colset__box__inr:hover {
+    background-color: #aebdc3;
+}
+.colset__box6 .colset__box__inr {
+	border: 1px solid #f1c25e;
+}
+.colset__box6 .colset__box__inr:hover {
+    background-color: #f1c25e;
+}

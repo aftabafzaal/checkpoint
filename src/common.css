@@ -1,0 +1,368 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+@font-face {
+    font-family:  'Myriad Pro';
+    src: url('/assets/fonts/MyriadPro-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.transition, .transition *, .transition *:after, .transition *:before, .transition *:hover {
+    transition: all 0.5s ease 0s !important;
+    -webkit-transition: all 0.5s ease 0s !important;
+    transition: all 500ms ease 0s;
+}
+
+body.is-home-page {
+	background-color:#d3d2d2;
+	font-family: 'Myriad Pro';
+}
+.is-home-page header {
+    height: 55px;
+    background-color: #0d2942;
+    padding: 7px 0;
+}
+
+.is-home-page 
+.hdr-top span {
+    color: #fff;
+    font-weight: 500;
+    font-size: 24px;
+    padding-left: 10px;
+    line-height: 1.8;
+}
+
+.is-home-page 
+.hdr-top a {
+    font-size:  16px;
+    line-height: 2.5;
+    background: #f3c13a;
+    padding: 0 40px;
+    border-radius:  5px;
+    color:  #000;
+    font-weight: 400;
+}
+
+.is-home-page 
+.hdr-top {
+    padding: 0 5px;
+    height:auto;
+}
+
+.is-home-page 
+.hdr-top a:hover {
+    color:  #fff;
+    background: #00a7e3;
+}
+
+.is-home-page 
+.ftr__icon ul li i {
+    font-size: 30px;
+}
+
+.is-home-page 
+.ftr__icon ul li i:nth-child(1) {
+    padding-right:  10px;
+}
+
+
+.is-home-page 
+.ftr__cont ul li a {
+    padding: 0px 9px;
+    border-right: 1px solid #41505d;
+    color:  #41505d;
+}
+
+.is-home-page 
+.ftr__cont p {
+    color: #5b6771;
+}
+.is-home-page 
+.ftr__cont ul {
+    padding:  5px 0;
+}
+
+
+
+body .logo-white {
+    width: 230px !important;
+    height: 40px !important;
+    display: inline-block !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+
+
+.logo-white img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+app-colset .container {
+    width: 1170px;
+}
+
+section.colset-section {
+    background-color: #e2e2e2;
+}
+.page-height-short footer {
+    position: static;
+}
+
+
+
+/*==============Media Queries==============*/
+/* 24" large Screens */
+@media only screen and (max-width : 1920px) {	}
+
+
+/* 22" large Screens */
+@media only screen and (max-width : 1680px) {	}
+
+
+/* 20" large Screens */
+@media only screen and (max-width : 1600px) {	}
+
+
+/* 19" large Screens */
+@media only screen and (max-width : 1440px) {	}
+
+
+/* 13" Notebook Large Devices, Wide Screens */
+@media only screen and (max-width : 1280px) {	}
+
+
+/* Ubuntu, Medium Screens */
+@media only screen and (max-width : 1198px) {	}
+
+
+/* 12" Notebook & iPad landscape  � width: 1024px */
+@media only screen and (max-width : 1024px) {
+    app-colset .container {
+        width: 100%;
+    }
+.caro-cap .caro__cap__lft p {
+    font-size: 20px;
+}
+.colset__box.metroflip-box .back h3 {
+    font-size: 18px;
+}
+.colset__box.metroflip-box .colset__box__inr {
+    height: 260px;
+}
+
+body .carousel-inner .item {
+    height: auto;
+}
+
+	}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {	}
+
+
+/*Landscape*/
+@media only screen and (max-width : 960px) {
+
+    
+.colset__box.metroflip-box .front p {
+    font-size: 14px;
+}
+.colset__box.metroflip-box .front h3 {
+    font-size: 16px;
+}
+.colset__box.metroflip-box .back h3 {
+    font-size: 15px;
+}
+.colset__box.metroflip-box .back {
+    position: absolute;
+    padding: 5px 10px 25px 10px;
+}
+
+	}
+
+
+/* Kindel Fire HD 8.9in (800x1280) Tablets */
+@media only screen and (max-width : 800px) {	
+
+.caro-cap .caro__cap__lft p br {
+    display:  none;
+}
+
+
+.carousel-inner .item {
+    height: 135px;
+    background-size: cover;
+}
+
+
+.colset__box.col-sm-4 {
+    width: 50%;
+    height: 280px;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+}
+
+
+/* iPad (All) (768x1024) Portrait Tablets */
+@media only screen and (max-width : 768px) {	}
+
+/* Lower then iPad (All) (767x---) */
+@media only screen and (max-width : 767px) {
+    .is-home-page .container {
+        width: 100%;
+    }
+
+}
+
+/*iPhone 6 Plus landscape � width: 736px */
+@media only screen and (max-width : 736px) {
+
+.carousel-inner .item {
+    height: 170px;
+    background-size: cover;
+}
+.caro__cap__lft {
+    float:  left;
+    width:  50%;
+}
+
+.caro__cap__rgt {
+    float:  right;
+    width:  50%;
+}
+.caro-cap .caro__cap__lft p {
+    padding: 0 20px;
+    font-size: 16px;
+}
+.caro__cap__lft {
+    padding: 10px 0;
+}
+
+	}
+
+/*iPhone 6 landscape � width: 667px */
+@media only screen and (max-width : 667px) {	}
+
+
+/*iPhone4 and iPhone5 Galaxy S2 and S3  */
+@media only screen and (max-width : 640px) {	}
+
+
+/* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
+@media only screen and (max-width : 603px) {
+.caro-cap .caro__cap__lft p {
+    padding: 0 20px;
+    font-size: 14px;
+}
+.colset__box.metroflip-box .front h3 {
+    font-size: 20px;
+}
+.hdr-top {
+    padding: 0 20px;
+}
+	}
+
+
+/* iPhone 5 Landscape � 320x568px */
+@media only screen and (max-width : 568px) {	}
+
+
+/* Kindel Fire HD 8.9in (533x853) Tablets */
+@media only screen and (max-width : 533px) {
+
+.carousel-inner .item {
+    height: 180px;
+    background-size: cover;
+}
+
+	}
+
+
+/*iPhone3 Landscape*/
+@media only screen and (max-width : 480px) {	
+
+.caro__cap__lft {
+    width: 60%;
+}
+.caro__cap__rgt {
+    width: 30%;
+}
+
+.caro__cap__rgt {
+    padding: 35px 0;
+    width: 30%;
+}
+
+
+
+
+}
+
+
+/* iPhone 6 PLUS (414x736) */
+@media only screen and (max-width : 414px) {
+	
+.hdr-top a {
+    padding: 0 10px;
+}
+.hdr-top span {
+    font-size: 22px;
+}
+	}
+
+
+/* iPhone 6 portrait (375x667) */
+@media only screen and (max-width : 375px ) {
+
+.hdr-top span {
+    line-height: 2.3;
+    font-size: 18px;
+	padding-left: 0px;
+}
+.caro-cap .caro__cap__lft p {
+    padding: 0 0px;
+    font-size: 12px;
+}
+.carousel-inner .item {
+    height: 155px;
+    background-size: cover;
+}
+.hdr-top {
+    padding: 0 10px;
+}
+
+
+	}
+
+
+/* Galaxy S5 (360x640) */
+@media only screen and (max-width : 360px) {	}
+
+
+/* iPhone 3/4 Blackberry8300 / LG/ AUSUS / S3 S4 */
+@media only screen and (max-width : 320px) {
+
+.hdr-top a {
+    font-size: 14px;
+    line-height: 2.9;
+}
+.carousel-inner .item {
+    height: 165px;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+	}
+
+
+/*Galaxy Y*/
+@media only screen and (max-width : 240px) {	}

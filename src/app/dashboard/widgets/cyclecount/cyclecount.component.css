@@ -1,0 +1,182 @@
+.box__cc{
+    text-align: center;
+
+border-radius: 8px 8px 0px 0px;
+}
+.box__cc{
+    text-align: center;
+line-height: 24px;
+border-radius: 3px;
+margin-bottom: 14px;
+}
+.box__cc ul li.bg-yellow{
+ background: #ffff99;
+}
+.box__cc ul li.bg-pink{
+ background: #14070b;
+}
+.box__cc ul li.bg-transparent{
+ background: transparent;
+}
+.box__cc ul li.bg-green{
+ background: #87d37c;
+}
+.box__cc h3{
+font-size: 18px;
+color:#686b6d;
+margin-top: 5px;
+font-weight: 400;
+
+}
+.box__cc strong{
+font-size: 36px;
+color:#2e3134;
+display: block;
+font-weight: 500;
+}
+.box__cc mark{	font-size: 10px;
+color:#878686;
+background: transparent;
+font-weight: 400;
+}
+.box__cc .box__inr{
+padding: 14px;
+}
+.summary__cc .box__inr h4{
+color:#878686;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+margin-top: 0px;
+font-size: 20px;
+text-align: center;
+clear: both;
+}
+.box__cc ul{
+padding-left: 0px;
+}
+
+.box__cc ul li {
+list-style: none;
+text-align: left;
+padding: 4px 15px;
+margin-top: 0;
+border-radius: 3px;
+margin-bottom: 10px;
+overflow: auto;
+}
+
+.box__cc ul li span {
+color: #686b6d;
+font-size: 14px;
+font-weight: 400;
+width: 90px;
+display: table-cell;
+/* background: yellow; */
+line-height: 18px;
+height: 40px;
+vertical-align: middle;
+float: left;
+}
+
+.box__cc ul li label {
+color: #2e3134;
+font-size: 36px;
+font-weight: 500;
+text-align: right;
+height: 30px;
+line-height: 38px;
+}
+
+.modal .conter-tile-area h3 {
+    line-height: 70px;
+}
+
+
+
+
+/* 12" Notebook & iPad landscape  � width: 1024px */
+@media only screen and (max-width : 1024px) {
+
+  
+
+.box__cc ul li span{
+    width: 76px;
+    font-size:12px;
+}
+
+.box__cc ul li label {
+    min-width: 30px;
+    border-radius: 0;
+    
+}
+
+.box__cc ul li {
+    padding: 2px 4px;
+}
+
+      }
+  
+  
+  /* Medium Devices, Desktops */
+  @media only screen and (max-width : 992px) {	}
+  
+  
+  /*Landscape*/
+  @media only screen and (max-width : 960px) {	}
+  
+  
+  /* Kindel Fire HD 8.9in (800x1280) Tablets */
+  @media only screen and (max-width : 800px) {	}
+  
+  
+  /* iPad (All) (768x1024) Portrait Tablets */
+  @media only screen and (max-width : 768px) {	}
+  
+  /* Lower then iPad (All) (767x---) */
+  @media only screen and (max-width : 767px) {	}
+  
+  /*iPhone 6 Plus landscape � width: 736px */
+  @media only screen and (max-width : 736px) {	}
+  
+  /*iPhone 6 landscape � width: 667px */
+  @media only screen and (max-width : 667px) {	}
+  
+  
+  /*iPhone4 and iPhone5 Galaxy S2 and S3  */
+  @media only screen and (max-width : 640px) {	}
+  
+  
+  /* Google Nexus 7 603x966 | Samsung Galaxy Tab 600x1024  */
+  @media only screen and (max-width : 603px) {	}
+  
+  
+  /* iPhone 5 Landscape � 320x568px */
+  @media only screen and (max-width : 568px) {	}
+  
+  
+  /* Kindel Fire HD 8.9in (533x853) Tablets */
+  @media only screen and (max-width : 533px) {	}
+  
+  
+  /*iPhone3 Landscape*/
+  @media only screen and (max-width : 480px) {	}
+  
+  
+  /* iPhone 6 PLUS (414x736) */
+  @media only screen and (max-width : 414px) {	}
+  
+  
+  /* iPhone 6 portrait (375x667) */
+  @media only screen and (max-width : 375px ) {	}
+  
+  
+  /* Galaxy S5 (360x640) */
+  @media only screen and (max-width : 360px) {	}
+  
+  
+  /* iPhone 3/4 Blackberry8300 / LG/ AUSUS / S3 S4 */
+  @media only screen and (max-width : 320px) {	}
+  
+  
+  /*Galaxy Y*/
+  @media only screen and (max-width : 240px) {	}

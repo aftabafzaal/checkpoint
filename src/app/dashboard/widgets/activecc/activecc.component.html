@@ -1,0 +1,54 @@
+<div *ngIf="activecc.events && activecc.events != null then content else noContent"></div>
+
+<ng-template #content>
+    <div class="box col-sm-3" [ngClass]="(activecc.counting>0)?'counting':'pending'">
+        
+        <div class="box__inr">
+            <div class="box__chart col-sm-6">
+                <h4 *ngIf="activecc && activecc.pending>0 || activecc.accepted>0">COMPLETED</h4>
+                <h4 *ngIf="activecc && activecc.counting>0">COUNTING NOW</h4>
+
+                <div class="pie-wrapper" *ngIf="activecc.events">
+                    <div class="csspie__inr"></div>
+                    <div class="csspie chartVal__{{activecc.events['0']['det-pct'] | number:'1.0-0' }}"></div>
+                    <p class="pie-label">{{activecc.events["0"]["det-pct"]}}%</p>
+                </div>
+
+            </div>
+
+            <div class="box__cont col-sm-6 list-col-2" *ngIf="activecc.events">
+                <h5 *ngIf="activecc && activecc.pending>0 || activecc.accepted>0">Finished : {{activecc.events["0"].endts | date:"MM/dd h:mm a"}}</h5>
+                <h5 *ngIf="activecc && activecc.counting>0"><i class="icon ani-blinking"></i> Started : {{activecc.events["0"].startts | date:"MM/dd h:mm a"}}</h5>
+                <div class="lead_text">
+                    <h4 *ngIf="activecc.events['0'].loctype == 'SF'">Salesfloor
+                        <br> {{activecc.events["0"]["scope-desc"]}}
+                    </h4>
+                    <h4 *ngIf="activecc.events['0'].loctype == 'BR'">Stockroom
+                        <br> {{activecc.events["0"]["scope-desc"]}}
+                    </h4>
+                </div>
+                <ul>
+                    <li>
+                        <span>Team</span>
+                        <h3>{{activecc.events["0"].teamcnt}}</h3>
+                    </li>
+                    <li>
+                        <span>Counted</span>
+                        <h3>{{activecc.events["0"].counted}}</h3>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</ng-template>
+
+<ng-template #noContent>
+            <div class="box col-sm-3">
+                <div class="box__inr text-center">
+                        <div class="flex-cntr hedless-height mt10">Nothing to Show</div>
+                </div>
+        </div>
+   
+</ng-template>
